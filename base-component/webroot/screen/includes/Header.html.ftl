@@ -27,6 +27,7 @@
     <#assign srcUrl = sri.buildUrl(scriptLocation).url>
     <script src="${srcUrl}<#if !scriptLocation?starts_with("http") && !srcUrl?contains("?")>?v=${ec.web.getResourceDistinctValue()}</#if>" type="text/javascript"></script>
 </#list>
+    <script defer data-domain="coarchy.com" src="https://plausible.io/js/script.js"></script>
 <#-- Icon -->
 <#list sri.getThemeValues("STRT_SHORTCUT_ICON") as iconLocation>
     <link rel="shortcut icon" href="${sri.buildUrl(iconLocation).url}">
