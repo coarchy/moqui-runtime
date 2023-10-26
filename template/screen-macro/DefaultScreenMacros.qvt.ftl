@@ -1578,7 +1578,7 @@ ${sri.renderIncludeScreen(.node["@location"], .node["@share-scope"]!)}
                     <#t>${sri.appendToAfterScreenWriter(afterFormText)}
                     <#t><@linkFormLink linkNode linkFormId linkText linkUrlInfo/>
                 <#else>&nbsp;</#if>
-            <#else>&nbsp;</#if>
+            <#else></#if>
         <#elseif widgetNode?node_name == "set"><#-- do nothing, handled above -->
         <#else>
             <#assign widgetNodeText><#visit widgetNode></#assign>
