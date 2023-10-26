@@ -1583,7 +1583,7 @@ ${sri.renderIncludeScreen(.node["@location"], .node["@share-scope"]!)}
         <#else>
             <#assign widgetNodeText><#visit widgetNode></#assign>
             <#assign widgetNodeText = widgetNodeText?trim>
-            <#t><#if widgetNodeText?has_content>${widgetNodeText}<#else>&nbsp;</#if>
+            <#t><#if widgetNodeText?has_content>${widgetNodeText}<#else></#if>
         </#if>
     </#list>
     <#t>${sri.popContext()}
