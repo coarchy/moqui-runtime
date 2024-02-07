@@ -49,7 +49,7 @@ along with this software (see the LICENSE.md file). If not, see
         <!-- TODO: get fancier with this, crawl screen tree looking for screens that don't require authc, maybe some sort of setting to allow robots or not -->
         <!-- TODO: also generate sitemap XML with paths we want crawled, based on ? -->
         <actions><script><![CDATA[
-            List disallowList = ['settings','coapp','apps', 'vapps', 'qapps', 'rest', 'rpc', 'status', 'menuData']
+            List disallowList = ['apps', 'vapps', 'qapps', 'rest', 'rpc', 'status', 'menuData']
             def outWriter = new StringWriter()
             outWriter.append("user-agent: *\n")
             for (disPath in disallowList) outWriter.append("disallow: /${disPath}\n")
@@ -58,20 +58,6 @@ along with this software (see the LICENSE.md file). If not, see
         </actions>
         <default-response type="none"/>
     </transition>
-<!--    <transition name="sitemap.xml" read-only="true">-->
-<!--        &lt;!&ndash; TODO: get fancier with this, crawl screen tree looking for screens that don't require authc, maybe some sort of setting to allow robots or not &ndash;&gt;-->
-<!--        &lt;!&ndash; TODO: also generate sitemap XML with paths we want crawled, based on ? &ndash;&gt;-->
-<!--        <actions><script><![CDATA[-->
-<!--            List disallowList = ['apps', 'vapps', 'qapps', 'rest', 'rpc', 'status', 'menuData']-->
-<!--            def outWriter = new StringWriter()-->
-<!--            outWriter.append("user-agent: *\n")-->
-<!--            for (disPath in disallowList) outWriter.append("disallow: /${disPath}\n")-->
-<!--            ec.web.sendTextResponse(outWriter.toString())-->
-<!--            ]]></script>-->
-<!--        </actions>-->
-<!--        <default-response type="none"/>-->
-<!--    </transition>-->
-
 
     <!-- Force custom favicon, if set in the "STRT_SHORTCUT_ICON" ScreenThemeResource. -->
     <transition name="favicon.ico">
